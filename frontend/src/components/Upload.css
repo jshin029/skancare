@@ -17,12 +17,49 @@
 
 .upload-button-container {
   text-align: center;
-  margin-top: 8%
+  margin-top: 8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upload-button {
+  border: none;
+  border-radius: 16px;
+  padding: 12px 36px 12px;
+  opacity: 1.0;
+  transition: 0.3s;
+  background-color: #ed2222;
+  color: #ffe8e8;
+  font-size: 22px;
+}
+
+.upload-button:hover, .upload-button:focus {
+    background-color: #ffffff;
+    opacity: 0.8;
+    box-shadow: 1px 2px 20px 8px rgba(0, 0, 0, 0.1);
+    color: #ed2222;
+		transition: 0.3s;
 }
 
 .dropzone-container {
   margin-top: 2%;
-  height: 100px
+  border-radius: 24px;
+  display: block;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 200px;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  box-shadow: 1px 2px 40px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dropzone-container:hover {
+  cursor: pointer;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 50px 20px rgba(0, 0, 0, 0.2);
 }
 
 #filename {

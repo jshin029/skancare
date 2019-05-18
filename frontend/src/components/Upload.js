@@ -24,7 +24,7 @@ export default class Upload extends Component {
       return
     }
     else {
-      this.setState({ 
+      this.setState({
         file,
         fileName: file.name
       })
@@ -71,7 +71,7 @@ export default class Upload extends Component {
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
         </div>
         <div className="upload-button-container">
-          <button type="button" class="btn btn-primary">Upload</button>
+          <button type="button" className="upload-button"><i class="fa fa-trash"></i>Upload</button>
         </div>
         <div className="toast-container">
           <div className="container-fluid">
