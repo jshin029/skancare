@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './Upload.css'
 import Dropzone from 'react-dropzone'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'
+import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -55,6 +56,17 @@ export default class Upload extends Component {
   }
 
   render() {
+    if (this.state.displayName && this.state.score) {
+      return  <Redirect
+                to={{
+                  pathname: '/results',
+                  state: { 
+                    displayName: this.state.displayName,
+                    score: this.state.score
+                  }
+                }} />
+    }
+
     return (
       <div className="upload-container">
         <div className="upload-desc-container">
