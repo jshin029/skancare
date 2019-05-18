@@ -1,0 +1,31 @@
+.upload-icon-container {
+  width: 100%;
+  text-align: center;
+}
+
+.upload-desc-container {
+  margin-top: 10%
+}
+
+#upload-icon {
+  width: 75%
+}
+
+#upload-icon:hover {
+  cursor: pointer
+}
+
+.upload-button-container {
+  text-align: center;
+  margin-top: 8%
+}
+
+.dropzone-container {
+  margin-top: 2%;
+  height: 100px
+}
+
+#filename {
+  text-align: center;
+  margin-top: 3%
+}
