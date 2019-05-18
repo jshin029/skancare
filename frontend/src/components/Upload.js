@@ -44,16 +44,6 @@ export default class Upload extends Component {
       data.append('file', this.state.file)
       data.append('fileName', this.state.fileName)
 
-      // fetch(`https://cors-anywhere.herokuapp.com/` + `${url}/foo`, {
-      //   method: 'POST',
-      //   body: data,
-      // }).then(res => {
-      //   // console.log(res.data)
-      //   return res.json()
-      // }).then(data => {
-      //   console.log(data)
-      // })
-
       axios.post(`https://cors-anywhere.herokuapp.com/` + `${url}/foo`, data).then(res => {
         this.setState({
           displayName: res.data.displayName,
