@@ -12,9 +12,9 @@
             <stop stop-color="#D18989" offset="100%"></stop>
             <stop stop-color="#F46464" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+        <linearGradient x1="0%" y1="50%" x2="99.8557067%" y2="50%" id="linearGradient-2">
             <stop stop-color="#FFB6B6" offset="0%"></stop>
-            <stop stop-color="#F46969" offset="0%"></stop>
+            <stop stop-color="#F46969" offset="99.9257726%"></stop>
             <stop stop-color="#FF9CAD" offset="100%"></stop>
             <stop stop-color="#DD638D" offset="100%"></stop>
             <stop stop-color="#D18989" offset="100%"></stop>
@@ -24,12 +24,16 @@
             <stop stop-color="#FF6A6A" offset="0%"></stop>
             <stop stop-color="#FFA9CA" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#F44444" offset="0%"></stop>
+            <stop stop-color="#FFD2D2" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-5">
             <stop stop-color="#FF9CAD" offset="0%"></stop>
             <stop stop-color="#FF7279" offset="100%"></stop>
             <stop stop-color="#FF5959" offset="100%"></stop>
         </linearGradient>
-        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-5">
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-6">
             <stop stop-color="#EA2A2A" offset="0%"></stop>
             <stop stop-color="#FF7279" offset="100%"></stop>
             <stop stop-color="#FF9CAD" offset="100%"></stop>
@@ -46,7 +50,8 @@
         <circle id="Oval" stroke="#979797" fill="#FFFFFF" transform="translate(735.500000, 214.500000) scale(-1, -1) translate(-735.500000, -214.500000) " cx="735.5" cy="214.5" r="7.5"></circle>
         <circle id="Oval" stroke="#979797" fill="#FFFFFF" transform="translate(1054.500000, 222.500000) scale(-1, -1) translate(-1054.500000, -222.500000) " cx="1054.5" cy="222.5" r="7.5"></circle>
         <circle id="Oval" fill="url(#linearGradient-3)" transform="translate(769.000000, 1002.000000) scale(1, -1) translate(-769.000000, -1002.000000) " cx="769" cy="1002" r="125"></circle>
-        <ellipse id="Oval" fill-opacity="0.8" fill="url(#linearGradient-4)" cx="181" cy="178" rx="45" ry="44"></ellipse>
-        <circle id="Oval" fill-opacity="0.8" fill="url(#linearGradient-5)" cx="1661.5" cy="178.5" r="62.5"></circle>
+        <circle id="Oval" fill="url(#linearGradient-4)" transform="translate(1963.000000, 700.000000) scale(1, -1) translate(-1963.000000, -700.000000) " cx="1963" cy="700" r="50"></circle>
+        <ellipse id="Oval" fill-opacity="0.8" fill="url(#linearGradient-5)" cx="181" cy="178" rx="45" ry="44"></ellipse>
+        <circle id="Oval" fill-opacity="0.8" fill="url(#linearGradient-6)" cx="1661.5" cy="178.5" r="62.5"></circle>
     </g>
 </svg>
