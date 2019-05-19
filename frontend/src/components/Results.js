@@ -117,27 +117,32 @@ const Results = props => {
               <div className="row justify-content-center">
                 <div className="col">
                   <div className="right-box-1">
-                    <Bar
-                      data={{
-                        labels: ["0-9", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-89", "90-100"],
-                        datasets: [
-                          {
-                            label: 'Age Group & Frequencies',
-                            backgroundColor: '#f66383',
-                            borderColor: 'rgba(255,99,132,1)',
-                            borderWidth: 1,
-                            hoverBackgroundColor: '#FF6384',
-                            hoverBorderColor: 'rgba(255,99,132,1)',
-                            data: chooseNums(props.location.state.displayName),
-                          }
-                        ]
-                      }}
-                      width={50}
-                      height={45}
-                      options={{
-                        maintainAspectRatio: false
-                      }}
-                    />
+                    <div className="desc-title">
+                      <p className="headings">Age Distributions</p>
+                    </div>
+                    <div className="bar-container">
+                      <Bar
+                        data={{
+                          labels: ["0-9", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-89", "90-100"],
+                          datasets: [
+                            {
+                              label: 'Age Group & Frequencies',
+                              backgroundColor: '#f66383',
+                              borderColor: 'rgba(255,99,132,1)',
+                              borderWidth: 1,
+                              hoverBackgroundColor: '#FF6384',
+                              hoverBorderColor: 'rgba(255,99,132,1)',
+                              data: chooseNums(props.location.state.displayName),
+                            }
+                          ]
+                        }}
+                        width={100}
+                        height={190}
+                        options={{
+                          maintainAspectRatio: false
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
