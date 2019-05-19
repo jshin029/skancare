@@ -17,10 +17,10 @@ const particlesOptions = {
         }
       },
       size: {
-          value: 5,
+          value: 6,
           random: true,
           anim: {
-              speed: 5,
+              speed: 5.5,
               size_min: 3
           }
       },
@@ -29,13 +29,14 @@ const particlesOptions = {
       },
       move: {
 	            random: true,
-	            speed: 0.75,
+	            speed: 1,
 	            direction: "top",
 	            out_mode: "out"
       },
       color:  {
-        value: "#f66383"
-      },
+        value: "#fff"
+      }
+    },
       interactivity: {
 	        events: {
 	            onclick: {
@@ -49,7 +50,6 @@ const particlesOptions = {
 	            }
 	        }
 	    }
-    }
 }
 
 export default class Upload extends Component {
@@ -93,7 +93,7 @@ export default class Upload extends Component {
         <div className="upload-desc-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
-              <p>Upload your file here</p>
+              <div className="instruction">Upload an image here</div>
             </div>
           </div>
         </div>
