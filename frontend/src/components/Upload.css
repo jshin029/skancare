@@ -82,3 +82,12 @@
   text-align: center;
   margin-top: 3%
 }
+
+#spinner {
+  width: 5%
+}
+
+.spinner-container {
+  text-align: center;
+  margin-top: 10%
+}

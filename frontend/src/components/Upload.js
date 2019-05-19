@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import './Upload.css'
 import Dropzone from 'react-dropzone'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify'
+import { Redirect } from 'react-router-dom'
+import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
 import Particles from 'react-particles-js';
 
 const uploadIcon = require('../assets/up-arrow.png')
+const url = `http://0e1f0eca.ngrok.io`
+const spinner = require('../assets/spinner.svg')
 
 const particlesOptions = {
   particles: {
@@ -55,7 +59,9 @@ const particlesOptions = {
 export default class Upload extends Component {
   state = {
     file: undefined,
-    fileName: ""
+    fileName: "",
+    displayName: "",
+    score: undefined
   }
 
   handleFileDrop = acceptedFiles => {
@@ -64,8 +70,10 @@ export default class Upload extends Component {
       return
     }
 
+    console.log(acceptedFiles)
+
     let file = acceptedFiles[0]
-    if (file.type != "image/png") {
+    if (file.type != "image/jpeg") {
       toast.warn("Please upload a PNG file!")
       return
     }
@@ -80,13 +88,40 @@ export default class Upload extends Component {
   handleSubmit = e => {
     e.preventDefault()
 
+    this.setState({ isLoading: true })
+
     if (this.state.file && this.state.fileName) {
-      // Send file to backend
+      let data = new FormData()
+      data.append('file', this.state.file)
+      data.append('fileName', this.state.fileName)
+
+      axios.post(`https://cors-anywhere.herokuapp.com/` + `${url}/foo`, data).then(res => {
+        this.setState({
+          displayName: res.data.displayName,
+          score: res.data.score,
+          isLoading: false
+        })
+      }).catch(err => {
+        console.log(err)
+        this.setState({ isLoading: false })
+      })
+
     }
   }
 
 
   render() {
+    if (this.state.displayName && this.state.score) {
+      return  <Redirect
+                to={{
+                  pathname: '/results',
+                  state: { 
+                    displayName: this.state.displayName,
+                    score: this.state.score
+                  }
+                }} />
+    }
+
     return (
       <div className="upload-container">
       <Particles className='particles' params={particlesOptions}/>
@@ -119,7 +154,10 @@ export default class Upload extends Component {
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
         </div>
         <div className="upload-button-container">
-          <button type="button" className="upload-button"><i class="fa fa-trash"></i>Upload</button>
+          <button type="button" class="btn btn-primary" onClick={ this.handleSubmit }>Upload</button>
+        </div>
+        <div className="spinner-container">
+          { this.state.isLoading && <img src={ spinner } id="spinner"/> }
         </div>
         <div className="toast-container">
           <div className="container-fluid">
