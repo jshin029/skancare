@@ -7,10 +7,10 @@ import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
 import Particles from 'react-particles-js';
 
-const logo = require('../assets/logo.png')
 const uploadIcon = require('../assets/up-arrow.png')
 const url = `http://0e1f0eca.ngrok.io`
 const spinner = require('../assets/spinner.svg')
+const logo = require('../assets/logo.png')
 
 const particlesOptions = {
   particles: {
@@ -126,19 +126,21 @@ export default class Upload extends Component {
     return (
       <div className="upload-container">
       <Particles className='particles' params={particlesOptions}/>
-        <div className="upload-desc-container">
+        <div className="row">
           <div className="logo-container">
             <NavLink to="/">
               <img src={ logo } id="logo" alt=""/>
             </NavLink>
           </div>
+        </div>
+        <div className="upload-desc-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="instruction">Upload an image here</div>
             </div>
           </div>
         </div>
-          <div className="container-fluid">
+            <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-1">
                 <Dropzone onDrop={ this.handleFileDrop }>
