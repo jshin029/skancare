@@ -13,47 +13,34 @@ const spinner = require('../assets/spinner.svg')
 
 const particlesOptions = {
   particles: {
-      number: {
-        value: 100,
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      size: {
-          value: 6,
-          random: true,
-          anim: {
-              speed: 5.5,
-              size_min: 3
-          }
-      },
-      line_linked: {
-	            enable: false
-      },
-      move: {
-	            random: true,
-	            speed: 1,
-	            direction: "top",
-	            out_mode: "out"
-      },
-      color:  {
-        value: "#fff"
-      }
-    },
-      interactivity: {
-	        events: {
-	            onclick: {
-	                enable: true,
-	                mode: "remove"
-	            }
-	        },
-	        modes: {
-	            remove: {
-	                particles_nb: 10
-	            }
-	        }
-	    }
+                number: {
+                  value: 100,
+                  density: {
+                    enable: true,
+                    value_area: 800
+                  }
+                },
+                size: {
+                    value: 7,
+                    random: true,
+                    anim: {
+                        speed: 5.5,
+                        size_min: 4
+                    }
+                },
+                line_linked: {
+          	            enable: false
+                },
+                move: {
+          	            random: true,
+          	            speed: 1,
+          	            direction: "top",
+          	            out_mode: "out"
+                },
+                color:  {
+                  value: "#fff"
+                }
+    }
 }
 
 export default class Upload extends Component {
@@ -124,11 +111,11 @@ export default class Upload extends Component {
 
     return (
       <div className="upload-container">
-      <Particles className='particles' params={particlesOptions}/>
+      <Particles className='particles' params={particlesOptions} />
         <div className="upload-desc-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
-              <div className="instruction">Upload an image here</div>
+              <div className="instruction">Drop an image here</div>
             </div>
           </div>
         </div>
