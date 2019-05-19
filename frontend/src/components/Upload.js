@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const uploadIcon = require('../assets/up-arrow.png')
 const url = `http://0e1f0eca.ngrok.io`
+const spinner = require('../assets/spinner.svg')
 
 export default class Upload extends Component {
   state = {
@@ -23,14 +24,15 @@ export default class Upload extends Component {
       return
     }
 
+    console.log(acceptedFiles)
+
     let file = acceptedFiles[0]
     if (file.type != "image/jpeg") {
       toast.warn("Please upload a PNG file!")
       return
     }
     else {
-      console.log(acceptedFiles)
-      this.setState({ 
+      this.setState({
         file,
         fileName: file.name
       })
@@ -40,6 +42,8 @@ export default class Upload extends Component {
   handleSubmit = e => {
     e.preventDefault()
 
+    this.setState({ isLoading: true })
+
     if (this.state.file && this.state.fileName) {
       let data = new FormData()
       data.append('file', this.state.file)
@@ -48,8 +52,12 @@ export default class Upload extends Component {
       axios.post(`https://cors-anywhere.herokuapp.com/` + `${url}/foo`, data).then(res => {
         this.setState({
           displayName: res.data.displayName,
-          score: res.data.score
+          score: res.data.score,
+          isLoading: false
         })
+      }).catch(err => {
+        console.log(err)
+        this.setState({ isLoading: false })
       })
 
     }
@@ -99,6 +107,9 @@ export default class Upload extends Component {
         </div>
         <div className="upload-button-container">
           <button type="button" class="btn btn-primary" onClick={ this.handleSubmit }>Upload</button>
+        </div>
+        <div className="spinner-container">
+          { this.state.isLoading && <img src={ spinner } id="spinner"/> }
         </div>
         <div className="toast-container">
           <div className="container-fluid">
