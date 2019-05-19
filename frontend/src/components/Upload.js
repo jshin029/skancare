@@ -164,7 +164,7 @@ export default class Upload extends Component {
           <button type="button" class="upload-button" onClick={ this.handleSubmit }>Submit</button>
         </div>
         <div className="spinner-container">
-          { !this.state.isLoading && <img src={ spinner } id="spinner"/> }
+          { this.state.isLoading && <img src={ spinner } id="spinner"/> }
         </div>
         <div className="toast-container">
           <div className="container-fluid">
