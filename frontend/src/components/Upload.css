@@ -5,7 +5,7 @@ body {
 .particles {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-image: url("../assets/bg.svg");
   background-size: cover;
 }
@@ -39,11 +39,11 @@ body {
 
 .upload-button-container {
   text-align: center;
-  margin-top: 8%;
+  padding-top: 4%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 8%;
+  margin-bottom: 3%;
 }
 
 .upload-button {
@@ -81,6 +81,13 @@ body {
 #filename {
   text-align: center;
   margin-top: 3%;
+  font-family: "Circular Std";
+  color: white;
+  margin: 4px 0
+}
+
+.filename-container {
+  height: 110%
 }
 
 #spinner {
@@ -89,7 +96,7 @@ body {
 
 .spinner-container {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .upbox {

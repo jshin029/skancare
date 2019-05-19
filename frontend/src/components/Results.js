@@ -35,6 +35,36 @@ const chooseDescription = name => {
   return desc
 }
 
+const chooseNums = name => {
+  let nums = []
+
+  switch (name) {
+    case "akiec":
+      nums = [0,0,4,9,49,52,114,161,125,0]
+      break;
+    case "bcc":
+      nums = [0,0,4,9,49,52,114,161,125,0]
+      break;
+    case "bkl":
+      nums = [2,0,0,11,53,79,124,150,95,0]
+      break;
+    case "df":
+      nums = [0,0,2,16,23,31,27,13,3,0]
+      break;
+    case "nv":
+      nums = [0,0,6,42,51,96,91,153,75,0]
+      break;
+    case "vasc":
+      nums = [0,0,5,34,242,193,26,12,1,0]
+      break;
+    default:
+      nums = [7,6,9,13,19,33,14,25,16,0]
+      break;
+  }
+
+  return nums
+}
+
 const Results = props => {
   return (
     <div className="results-container">
@@ -89,16 +119,16 @@ const Results = props => {
                   <div className="right-box-1">
                     <Bar
                       data={{
-                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                        labels: ["0-9", "10-19", "20-29", "30-39", "40-49", "50-59", "60-69", "70-79", "80-89", "90-100"],
                         datasets: [
                           {
-                            label: 'My First dataset',
-                            backgroundColor: 'rgba(255,99,132,0.2)',
+                            label: 'Age Group & Frequencies',
+                            backgroundColor: '#f66383',
                             borderColor: 'rgba(255,99,132,1)',
                             borderWidth: 1,
-                            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                            hoverBackgroundColor: '#FF6384',
                             hoverBorderColor: 'rgba(255,99,132,1)',
-                            data: [65, 59, 80, 81, 56, 55, 40]
+                            data: chooseNums(props.location.state.displayName),
                           }
                         ]
                       }}
