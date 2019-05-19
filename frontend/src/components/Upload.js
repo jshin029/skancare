@@ -4,12 +4,58 @@ import Dropzone from 'react-dropzone'
 import { ToastContainer, toast } from 'react-toastify'
 import { Redirect, NavLink } from 'react-router-dom'
 import axios from 'axios'
-import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css';
+import Particles from 'react-particles-js';
 
 const logo = require('../assets/logo.png')
 const uploadIcon = require('../assets/up-arrow.png')
 const url = `http://0e1f0eca.ngrok.io`
 const spinner = require('../assets/spinner.svg')
+
+const particlesOptions = {
+  particles: {
+      number: {
+        value: 100,
+        density: {
+          enable: true,
+          value_area: 800
+        }
+      },
+      size: {
+          value: 6,
+          random: true,
+          anim: {
+              speed: 5.5,
+              size_min: 3
+          }
+      },
+      line_linked: {
+	            enable: false
+      },
+      move: {
+	            random: true,
+	            speed: 1,
+	            direction: "top",
+	            out_mode: "out"
+      },
+      color:  {
+        value: "#fff"
+      }
+    },
+      interactivity: {
+	        events: {
+	            onclick: {
+	                enable: true,
+	                mode: "remove"
+	            }
+	        },
+	        modes: {
+	            remove: {
+	                particles_nb: 10
+	            }
+	        }
+	    }
+}
 
 export default class Upload extends Component {
   state = {
@@ -29,7 +75,7 @@ export default class Upload extends Component {
 
     let file = acceptedFiles[0]
     if (file.type != "image/jpeg") {
-      toast.warn("Please upload a PNG file!")
+      toast.warn("Please upload a JPEG/JPG file!")
       return
     }
     else {
@@ -64,12 +110,13 @@ export default class Upload extends Component {
     }
   }
 
+
   render() {
     if (this.state.displayName && this.state.score) {
       return  <Redirect
                 to={{
                   pathname: '/results',
-                  state: { 
+                  state: {
                     displayName: this.state.displayName,
                     score: this.state.score
                   }
@@ -78,6 +125,7 @@ export default class Upload extends Component {
 
     return (
       <div className="upload-container">
+      <Particles className='particles' params={particlesOptions}/>
         <div className="upload-desc-container">
           <div className="logo-container">
             <NavLink to="/">
@@ -86,11 +134,10 @@ export default class Upload extends Component {
           </div>
           <div className="container-fluid">
             <div className="row justify-content-center">
-              <p>Upload your file here</p>
+              <div className="instruction">Upload an image here</div>
             </div>
           </div>
         </div>
-        <div className="dropzone-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-1">
@@ -110,9 +157,9 @@ export default class Upload extends Component {
             </div>
           </div>
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
-        </div>
-        <div className="upload-button-container">
-          <button type="button" class="btn btn-primary" onClick={ this.handleSubmit }>Upload</button>
+
+        <div className="upload-button-container upload">
+          <button type="button" class="upload-button" onClick={ this.handleSubmit }>Upload</button>
         </div>
         <div className="spinner-container">
           { this.state.isLoading && <img src={ spinner } id="spinner"/> }
