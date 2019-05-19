@@ -1,34 +1,30 @@
-
-
 .results-container {
   background-color: #FFF3F3;
   height: 100vh;
 }
 
 .leftCol {
-	height: 600px;
-	margin-top: 10%;
-
+	height: 500px;
+  margin-top: 8%;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  box-shadow: 1px 2px 40px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  width: 20px
 }
 
 .rightCol {
 	height: 600px;
-	margin-top: 10%;
-
 }
 
 .topRight {
-	height: 200px;
-	margin-bottom: 5%; 
+	height: 350px;
 }
-
-.botRight {
-	height: 370px;
-}
-
 
 
 .right-container {
+  margin-top: 8%
 }
 
 .dropzone-container {
@@ -41,7 +37,95 @@
 }
 
 .dropzone-container:hover {
-  cursor: pointer;
   border-color: rgba(0, 0, 0, 0.1);
   box-shadow: 1px 2px 50px 20px rgba(0, 0, 0, 0.2);
+}
+
+.results-container {
+  padding-top: 4%
+}
+
+.left-box {
+  margin-top: 8%;
+  border-radius: 24px;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  box-shadow: 1px 2px 40px 20px rgba(0, 0, 0, 0.1);
+  height: 500px
+}
+
+.left-box {
+  margin-right: 4px
+}
+
+.right-box-1, .right-box-2 {
+  margin-left: 4px
+}
+
+.right-box-1 {
+  margin-top: 8%;
+  border-radius: 24px;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  box-shadow: 1px 2px 40px 20px rgba(0, 0, 0, 0.1);
+  height: 275px
+}
+
+.right-box-2 {
+  margin-top: 25px;
+  border-radius: 24px;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+  box-shadow: 1px 2px 40px 20px rgba(0, 0, 0, 0.1);
+  height: 200px
+}
+
+.right-inner-container {
+  height: 100%
+}
+
+.chart-container {
+  padding-top: 4%
+}
+
+.accuracy-container {
+  padding-top: 5%;
+  padding-left: 2%
+}
+
+.headings {
+  padding-left: 5%;
+  font-family: 'Circular Std';
+  font-weight: bold;
+  font-size: 160%;
+  color: #434343
+}
+
+.score-container {
+  text-align: center
+}
+
+.score {
+  padding-top: 4%;
+  font-family: 'Circular Std';
+  font-weight: bold;
+  font-size: 300%;
+  color: #434343
+}
+
+.display-container {
+  width: 90%;
+  padding-left: 2%;
+}
+
+.display-caption {
+  font-family: 'Circular Std';
+  font-size: 95%;
+}
+
+.desc-title {
+  padding-top: 5%
 }

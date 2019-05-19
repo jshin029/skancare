@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/home" component={ Home }/>
-          <Route exact path="/upload" component={ Upload }/>
-          <Route exact path="/" component={ Results }/>
+          <Route exact path="/" component={ Upload }/>
+          <Route exact path="/results" component={ Results }/>
         </Switch>
       </BrowserRouter>
     </div>
