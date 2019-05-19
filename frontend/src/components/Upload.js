@@ -74,7 +74,7 @@ export default class Upload extends Component {
 
     let file = acceptedFiles[0]
     if (file.type != "image/jpeg") {
-      toast.warn("Please upload a PNG file!")
+      toast.warn("Please upload a JPEG/JPG file!")
       return
     }
     else {
@@ -115,7 +115,7 @@ export default class Upload extends Component {
       return  <Redirect
                 to={{
                   pathname: '/results',
-                  state: { 
+                  state: {
                     displayName: this.state.displayName,
                     score: this.state.score
                   }
@@ -154,7 +154,7 @@ export default class Upload extends Component {
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
         </div>
         <div className="upload-button-container">
-          <button type="button" class="btn btn-primary" onClick={ this.handleSubmit }>Upload</button>
+          <button type="button" class="upload-button" onClick={ this.handleSubmit }>Upload</button>
         </div>
         <div className="spinner-container">
           { this.state.isLoading && <img src={ spinner } id="spinner"/> }
