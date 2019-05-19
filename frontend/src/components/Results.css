@@ -42,11 +42,11 @@
 }
 
 .results-container {
-  padding-top: 4%
+  padding-top: 0
 }
 
 .left-box {
-  margin-top: 8%;
+  margin-top: 4%;
   border-radius: 24px;
   background-color: white;
   border-color: rgba(0, 0, 0, 0.1);
@@ -64,7 +64,7 @@
 }
 
 .right-box-1 {
-  margin-top: 8%;
+  margin-top: 4%;
   border-radius: 24px;
   background-color: white;
   border-color: rgba(0, 0, 0, 0.1);
@@ -127,5 +127,15 @@
 }
 
 .desc-title {
-  padding-top: 5%
+  padding-top: 5%;
+  padding-bottom: 0
+}
+
+#logo {
+  width: 20%;
+  margin-left: 2%
+}
+
+.logo-container {
+  padding-top: 2%
 }

@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import './Upload.css'
 import Dropzone from 'react-dropzone'
 import { ToastContainer, toast } from 'react-toastify'
-import { Redirect } from 'react-router-dom'
+import { Redirect, NavLink } from 'react-router-dom'
 import axios from 'axios'
 import 'react-toastify/dist/ReactToastify.css';
 import Particles from 'react-particles-js';
 
+const logo = require('../assets/logo.png')
 const uploadIcon = require('../assets/up-arrow.png')
 const url = `http://0e1f0eca.ngrok.io`
 const spinner = require('../assets/spinner.svg')
@@ -113,13 +114,17 @@ export default class Upload extends Component {
       <div className="upload-container">
       <Particles className='particles' params={particlesOptions} />
         <div className="upload-desc-container">
+          <div className="logo-container">
+            <NavLink to="/">
+              <img src={ logo } id="logo" alt=""/>
+            </NavLink>
+          </div>
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="instruction">Drop an image here</div>
             </div>
           </div>
         </div>
-        <div className="dropzone-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-1">
@@ -139,8 +144,8 @@ export default class Upload extends Component {
             </div>
           </div>
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
-        </div>
-        <div className="upload-button-container">
+
+        <div className="upload-button-container upload">
           <button type="button" class="upload-button" onClick={ this.handleSubmit }>Upload</button>
         </div>
         <div className="spinner-container">

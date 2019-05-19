@@ -1,6 +1,9 @@
 import React from 'react'
 import './Results.css'
 import { Pie, Bar } from 'react-chartjs-2'
+import { NavLink } from 'react-router-dom'
+
+const logo = require('../assets/logo.png')
 
 const chooseDescription = name => {
   let desc = ""
@@ -36,6 +39,13 @@ const Results = props => {
   return (
     <div className="results-container">
       <div className="container-fluid">
+        <div className="row">
+          <div className="logo-container">
+            <NavLink to="/">
+              <img src={ logo } id="logo" alt=""/>
+            </NavLink>
+          </div>
+        </div>
         <div className="row justify-content-center">
           <div className="col-md-5">
             <div className="left-inner-container">
@@ -76,7 +86,29 @@ const Results = props => {
             <div className="right-inner-container">
               <div className="row justify-content-center">
                 <div className="col">
-                  <div className="right-box-1"></div>
+                  <div className="right-box-1">
+                    <Bar
+                      data={{
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                        datasets: [
+                          {
+                            label: 'My First dataset',
+                            backgroundColor: 'rgba(255,99,132,0.2)',
+                            borderColor: 'rgba(255,99,132,1)',
+                            borderWidth: 1,
+                            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+                            hoverBorderColor: 'rgba(255,99,132,1)',
+                            data: [65, 59, 80, 81, 56, 55, 40]
+                          }
+                        ]
+                      }}
+                      width={50}
+                      height={45}
+                      options={{
+                        maintainAspectRatio: false
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="row justify-content-center">
