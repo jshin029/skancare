@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2200px" height="1300px" viewBox="0 0 2200 1300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFB6B6" offset="0%"></stop>
+            <stop stop-color="#FB5252" offset="0%"></stop>
+            <stop stop-color="#FF9CAD" offset="100%"></stop>
+            <stop stop-color="#DD638D" offset="100%"></stop>
+            <stop stop-color="#D18989" offset="100%"></stop>
+            <stop stop-color="#F46464" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#FFB6B6" offset="0%"></stop>
+            <stop stop-color="#F46969" offset="0%"></stop>
+            <stop stop-color="#FF9CAD" offset="100%"></stop>
+            <stop stop-color="#DD638D" offset="100%"></stop>
+            <stop stop-color="#D18989" offset="100%"></stop>
+            <stop stop-color="#F46464" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="77.8044926%" id="linearGradient-3">
+            <stop stop-color="#FF6A6A" offset="0%"></stop>
+            <stop stop-color="#FFA9CA" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#FF9CAD" offset="0%"></stop>
+            <stop stop-color="#FF7279" offset="100%"></stop>
+            <stop stop-color="#FF5959" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#EA2A2A" offset="0%"></stop>
+            <stop stop-color="#FF7279" offset="100%"></stop>
+            <stop stop-color="#FF9CAD" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFDFD" style="mix-blend-mode: screen;" x="0" y="0" width="2200" height="1300"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="url(#linearGradient-1)" x="0.5" y="0.5" width="451" height="304"></rect>
+        <rect id="Rectangle" stroke="#979797" fill="url(#linearGradient-2)" x="0.5" y="0.5" width="2199" height="1299"></rect>
+        <circle id="Oval" stroke="#979797" fill="#FFFFFF" cx="558.5" cy="46.5" r="7.5"></circle>
+        <path d="M1.13686838e-13,671.54635 L181,564.644699 L136,305 L470.41362,612.042204 C424.390682,402.473783 401.379213,291.148365 401.379213,278.06595 C401.379213,274.404589 502.249805,345.049272 703.990988,490 L557.956813,45.689392 L865.243783,335.773175 L810.431643,30.8653628 L1054.83503,222 L1054.83503,203.755698 L1054.83503,76.3666951 L1177.98006,0" id="Line" stroke="#FFFFFF" stroke-width="4" opacity="0.602120536" stroke-linecap="square"></path>
+        <circle id="Oval" stroke="#979797" fill="#FFFFFF" cx="328.5" cy="482.5" r="7.5"></circle>
+        <circle id="Oval" stroke="#979797" fill="#FFFFFF" transform="translate(401.500000, 281.500000) scale(-1, -1) translate(-401.500000, -281.500000) " cx="401.5" cy="281.5" r="7.5"></circle>
+        <circle id="Oval" stroke="#979797" fill="#FFFFFF" transform="translate(735.500000, 214.500000) scale(-1, -1) translate(-735.500000, -214.500000) " cx="735.5" cy="214.5" r="7.5"></circle>
+        <circle id="Oval" stroke="#979797" fill="#FFFFFF" transform="translate(1054.500000, 222.500000) scale(-1, -1) translate(-1054.500000, -222.500000) " cx="1054.5" cy="222.5" r="7.5"></circle>
+        <circle id="Oval" fill="url(#linearGradient-3)" transform="translate(769.000000, 1002.000000) scale(1, -1) translate(-769.000000, -1002.000000) " cx="769" cy="1002" r="125"></circle>
+        <ellipse id="Oval" fill-opacity="0.8" fill="url(#linearGradient-4)" cx="181" cy="178" rx="45" ry="44"></ellipse>
+        <circle id="Oval" fill-opacity="0.8" fill="url(#linearGradient-5)" cx="1661.5" cy="178.5" r="62.5"></circle>
+    </g>
+</svg>
