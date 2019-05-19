@@ -10,10 +10,6 @@
   text-align: center;
 }
 
-.upload-desc-container {
-  padding-top: 10%
-}
-
 #upload-icon {
   width: 75%
 }
@@ -37,12 +33,10 @@
   opacity: 1.0;
   transition: 0.3s;
   background-color: #ed2222;
-  color: #ffe8e8;
   font-size: 22px;
 }
 
 .upload-button:hover, .upload-button:focus {
-    background-color: #ffffff;
     opacity: 0.8;
     box-shadow: 1px 2px 20px 8px rgba(0, 0, 0, 0.1);
     color: #ed2222;
@@ -53,7 +47,6 @@
   margin-top: 2%;
   border-radius: 24px;
   display: block;
-  background-color: white;
   margin-left: auto;
   margin-right: auto;
   border-color: rgba(0, 0, 0, 0.1);
