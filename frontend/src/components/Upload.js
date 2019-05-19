@@ -132,7 +132,6 @@ export default class Upload extends Component {
             </div>
           </div>
         </div>
-        <div className="dropzone-container">
           <div className="container-fluid">
             <div className="row justify-content-center">
               <div className="col-1">
@@ -152,8 +151,8 @@ export default class Upload extends Component {
             </div>
           </div>
           { this.state.file && this.state.fileName && <p id="filename">{ this.state.fileName }</p> }
-        </div>
-        <div className="upload-button-container">
+
+        <div className="upload-button-container upload">
           <button type="button" class="upload-button" onClick={ this.handleSubmit }>Upload</button>
         </div>
         <div className="spinner-container">
